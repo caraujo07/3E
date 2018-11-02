@@ -1,0 +1,70 @@
+nav.navbar {
+  background-color: $navbar-color;
+    li {
+      margin: 0 5px;
+    }
+      a.nav-link {
+          @include navbar-typo;
+          color: $link-padrao;
+      }
+}
+
+.navbar-nav{
+  .active {
+    .nav-link {
+      color: $branco;
+    }
+  }
+}
+
+
+
+// ANIMAÇÃO HOVER
+
+$duration: .2s;
+$distance: 4px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+nav.navbar {
+  a.nav-link{
+    position: relative;
+    padding: 0;
+    padding-bottom: 6px!important;
+
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: $vermelho;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+        color: $branco;
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+            transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+    }
+}
+  }

@@ -1,0 +1,11 @@
+@mixin navbar-typo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $link-padrao;
+    letter-spacing: .1em;
+    line-height: 20px;
+    transition: all .3s ease;
+
+}
