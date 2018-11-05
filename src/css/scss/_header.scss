@@ -1,11 +1,14 @@
 nav.navbar {
+    .navbar-brand img{
+        width: 70%;
+    }
   background-color: $navbar-color;
     li {
       margin: 0 5px;
     }
-      a.nav-link {
-          @include navbar-typo;
-          color: $link-padrao;
+    a.nav-link {
+        @include navbar-typo;
+        color: $link-padrao;
       }
 }
 
@@ -28,8 +31,7 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 nav.navbar {
   a.nav-link{
     position: relative;
-    padding: 0;
-    padding-bottom: 6px!important;
+    padding: 6px 0;
 
 
     &:before,
@@ -48,7 +50,7 @@ nav.navbar {
     }
     &:after {
         opacity: 0;
-        transform: translateY($distance/2);
+     
         transition: transform $duration $easeOutBack, opacity $duration;
     }
     &:hover,
@@ -71,8 +73,9 @@ nav.navbar {
 
 .dropdown-toggle {
     &:after {
-        margin-left: 6.255em;
-        top: 8px;
+        opacity: 1!important;
+        margin-left: 6.2em;
+        top: .9em;
         background-color: transparent!important;
     }
 }
@@ -80,11 +83,11 @@ nav.navbar {
 .dropdown-menu {
     padding: 0;
     .dropdown-item {
-        margin: 1px 0;
         font-weight: bold;
         color: $link-padrao;
         background-color: #363636;
         text-transform: uppercase;
+        font-size: 14px;
         font-family: 'Roboto', sans-serif;
         &:hover {
             color: $verde;
