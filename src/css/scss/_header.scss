@@ -68,3 +68,27 @@ nav.navbar {
     }
 }
   }
+
+.dropdown-toggle {
+    &:after {
+        margin-left: 6.255em;
+        top: 8px;
+        background-color: transparent!important;
+    }
+}
+
+.dropdown-menu {
+    padding: 0;
+    .dropdown-item {
+        margin: 1px 0;
+        font-weight: bold;
+        color: $link-padrao;
+        background-color: #363636;
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        &:hover {
+            color: $verde;
+            transition: all .3s ease;
+        }
+    }
+}
