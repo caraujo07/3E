@@ -1,14 +1,17 @@
 nav.navbar {
-    .navbar-brand img{
+  background-color: $navbar-color;
+  position: fixed;
+  width: 100%;
+  top: 0;
+    .navbar-brand img {
         width: 70%;
     }
-  background-color: $navbar-color;
     li {
       margin: 0 5px;
     }
-    a.nav-link {
-        @include navbar-typo;
-        color: $link-padrao;
+      a.nav-link {
+          @include navbar-typo;
+          color: $link-padrao;
       }
 }
 
@@ -31,7 +34,8 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 nav.navbar {
   a.nav-link{
     position: relative;
-    padding: 6px 0;
+    padding: 0;
+    padding-bottom: 6px!important;
 
 
     &:before,
@@ -50,7 +54,7 @@ nav.navbar {
     }
     &:after {
         opacity: 0;
-     
+        transform: translateY($distance/2);
         transition: transform $duration $easeOutBack, opacity $duration;
     }
     &:hover,
@@ -71,27 +75,23 @@ nav.navbar {
 }
   }
 
-.dropdown-toggle {
-    &:after {
-        opacity: 1!important;
-        margin-left: 6.2em;
-        top: .9em;
-        background-color: transparent!important;
+.dropdown-menu {
+  background-color: $navbar-color;
+  .dropdown-item {
+    color: $branco;
+    @include navbar-typo;
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: $verde;
     }
+  }
 }
 
-.dropdown-menu {
-    padding: 0;
-    .dropdown-item {
-        font-weight: bold;
-        color: $link-padrao;
-        background-color: #363636;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-family: 'Roboto', sans-serif;
-        &:hover {
-            color: $verde;
-            transition: all .3s ease;
-        }
-    }
+.dropdown-toggle {
+  &:after {
+    margin-left: 4.5em;
+    top: 8px;
+    background: transparent!important;
+  }
 }

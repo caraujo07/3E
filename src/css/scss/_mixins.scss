@@ -1,11 +1,19 @@
 @mixin navbar-typo {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 16px;
+    color: #FFF;
+    font-weight: lighter;
+    text-transform: capitalize;
     color: $link-padrao;
-    letter-spacing: .1em;
     line-height: 20px;
     transition: all .3s ease;
+}
 
+@mixin type-1 {
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+}
+@mixin type-2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
