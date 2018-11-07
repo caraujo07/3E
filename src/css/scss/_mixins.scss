@@ -16,4 +16,27 @@
 @mixin type-2 {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-weight: bold;
+}
+@mixin type-tit {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+@mixin type-card-tit {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: .1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+@mixin type-card-p {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
 }
