@@ -16,10 +16,11 @@
     }
     cite {
         @include type-card-tit;
+        font-style: italic;
         position: absolute;
         font-size: 16px;
         color: $navbar-color;
-        left: 20rem;
+        left: 19.5rem;
         top: 8.5rem;
         &:before {
             content: '';
