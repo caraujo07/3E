@@ -1,0 +1,29 @@
+.equipe {
+  display: none;
+    height: 500px;
+    background: $navbar-color;
+    margin-bottom: 90px;
+    h3 {
+      text-align: center;
+      @include type-tit;
+      position: relative;
+      color: $branco;
+      padding-top: 40px;
+      &:before {
+        content: '';
+        position: absolute;
+        background: url('../img/ornamento-blue.png') no-repeat center;
+        width: 100%;
+        height: 32px;
+        display: block;
+        left: -5em;
+        top: 1.5em;
+      }
+    }   
+}
+
+.equipe .carousel {
+  img {
+    width: 14%!important;
+  }
+}

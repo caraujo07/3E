@@ -1,10 +1,6 @@
 .conteudo {
   position: relative;
-  h3 {
-  text-align: center;
-  @include type-tit;
-  }
-  &::before {
+  &:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -17,6 +13,8 @@
 
 .conteudo {
   h3 {
+    text-align: center;
+    @include type-tit;
     position: relative;
     color: $tit;
     &:before {
@@ -26,8 +24,8 @@
       width: 100%;
       height: 32px;
       display: block;
-      left: -3.8em;
-      top: -.1em;
+      left: -4em;
+      top: -.2em;
     }
   }
   .presentation {
@@ -51,6 +49,7 @@
 
 .conteudo .card {
   border: none;
+  margin-top: -.5em;
   .card-body {
     color: $branco;
     h6 {
