@@ -6,6 +6,12 @@
   .ft-2 {
     height: 100px;
     background: #000;
+    color: $branco;
+    p {
+      @include type-1;
+      text-align: center;
+      padding-top: 2rem;
+    }
   }
 }
 

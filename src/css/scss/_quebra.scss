@@ -6,21 +6,21 @@
     background-size: cover;
     blockquote {
         @include type-card-p;
-        color: $branco;
+        color: $navbar-color;
         width: 400px;
         text-align: left;
         margin-right: 0;
         position: absolute;
-        right: 12em;
+        left: 5em;
         top: 5em;
     }
     cite {
         @include type-card-tit;
         position: absolute;
         font-size: 16px;
-        color: $branco;
-        right: 12em;
-        top: 8.5em;
+        color: $navbar-color;
+        left: 20rem;
+        top: 8.5rem;
         &:before {
             content: '';
             width: 32px;
@@ -28,8 +28,7 @@
             display: block;
             position: absolute;
             background: url('../img/ornamento-blue.png') no-repeat center;
-            left: -2.5em;
-            top: -.2em;
+            left: -2.5rem;
         }
     }
 }
