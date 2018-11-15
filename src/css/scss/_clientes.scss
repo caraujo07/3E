@@ -30,6 +30,16 @@
     }
 }
 
+.call {
+    text-align: center;
+    p {
+        margin-top: 40px;
+        margin-bottom: 5px;
+        @include type-1;
+        line-height: 20px;
+    }
+}
+
 .clientes button {
     background-color: transparent;
     border: 2px solid $verde;
@@ -40,7 +50,7 @@
     font-weight: 500;
     letter-spacing: .1em;
     @include type-2;
-    margin: 40px auto;
+    margin: 0 auto 40px auto;
     display: block;
     &:hover {
       background: $verde;
