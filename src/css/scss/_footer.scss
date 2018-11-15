@@ -2,9 +2,44 @@
   .ft-1 {
     height: 350px;
     background: $navbar-color;
+    .row{
+      padding-top: 4rem;
+    }
+    h6 {
+      color: $branco;
+      @include type-tit;
+      text-align: left;
+      font-size: 18px;
+      padding-bottom: 10px;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background: $vermelho;
+        margin-top: 3px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+     li a {
+        color: $branco;
+        @include type-card-p;
+        &:hover {
+          text-decoration: none;
+          color: $verde;
+          transition: all .3s ease;
+        }
+      }
+    }
+    
+    
   }
   .ft-2 {
-    height: 100px;
+    height: 80px;
     background: #000;
     color: $branco;
     p {
@@ -14,5 +49,4 @@
     }
   }
 }
-
 
